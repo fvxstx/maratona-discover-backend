@@ -20,7 +20,7 @@ module.exports = {
 
     // A diferença em dias
     // Math.floor: arredondando o calculo para baixo
-    const dayDiff = Math.floor(timeDiffMs / dayMs);
+    const dayDiff = Math.ceil(timeDiffMs / dayMs);
 
     return dayDiff;
   },
