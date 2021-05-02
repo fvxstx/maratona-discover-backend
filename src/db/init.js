@@ -36,7 +36,7 @@ const initDb = {
         name TEXT,
         daily_hours INT,
         total_hours INT,
-        createdAt DATETIME
+        createdAt TEXT
     )`);
 
     // Inserindo nesses campos, os valores
@@ -92,7 +92,7 @@ const initDb = {
         "Adu",
         2,
         10,
-        1619900791298
+        "21/02/2001"
     )`);
 
     // -- Fechando o banco de dados

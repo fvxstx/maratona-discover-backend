@@ -39,7 +39,7 @@ module.exports = {
       "${changeJob.name}",
       ${changeJob["daily-hours"]},
       ${changeJob["total-hours"]},
-      ${changeJob.createdAt}
+      "${changeJob.createdAt}"
     )`);
 
     await db.run(`DELETE FROM jobs WHERE id = ${id}`);

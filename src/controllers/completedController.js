@@ -36,11 +36,14 @@ module.exports = {
       return res.send("Job not found!");
     }
 
+    data = new Date(job.createdAt);
+    format = data.toLocaleDateString("en-GB");
+
     await Completed.change(jobId, {
       name: job.name,
       "daily-hours": job["daily-hours"],
       "total-hours": job["total-hours"],
-      createdAt: job.createdAt,
+      createdAt: format,
     });
 
     return res.redirect("/completed");
