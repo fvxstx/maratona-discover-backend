@@ -31,6 +31,14 @@ const initDb = {
             createdAt DATETIME
         )`);
 
+    await db.exec(`CREATE TABLE completed(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        daily_hours INT,
+        total_hours INT,
+        createdAt DATETIME
+    )`);
+
     // Inserindo nesses campos, os valores
     await db.run(`INSERT INTO profile (
             name, 
@@ -74,6 +82,18 @@ const initDb = {
             40,
             1618271553855
         )`);
+
+    await db.run(`INSERT INTO completed(
+        name,
+        daily_hours,
+        total_hours,
+        createdAt
+    ) VALUES (
+        "Adu",
+        2,
+        10,
+        1619900791298
+    )`);
 
     // -- Fechando o banco de dados
     await db.close();

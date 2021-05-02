@@ -63,12 +63,20 @@
               Encerrados
             </div>
           </div>
-          <a class="button orange" href="/job">
-            <span>
-              <img src="/images/plus-24.svg" alt="Novo Job" /> 
-            </span>
-            Adicionar novo job
-          </a>
+          <div>
+            <a class="button orange" href="/job">
+              <span>
+                <img src="/images/plus-24.svg" alt="Novo Job" /> 
+              </span>
+              Adicionar novo job
+            </a>
+            <a class="button orange" href="/completed">
+              <span>
+                <img src="/images/white-ok.svg" alt="Novo Job" /> 
+              </span>
+              Jobs concluidos
+            </a>
+          </div>
         </section>
       </div>
     </header>
@@ -81,7 +89,7 @@
 
           <% jobs.forEach((job) => { %>
 
-            <div class="card <%= job.status %>" data-id="<%= job.id %> ">
+            <div class="card <%= job.status %>" data-id="<%= job.id %>">
               <div class="id column"><%= job.id %> </div>
               <div class="name column">
                 <%= job.name %> 
@@ -107,6 +115,9 @@
               </div>
               <div class="actions column flex">
                 <p class="sr-only">Ações</p>
+                <button class="completed button white" title="Job concluido">
+                  <img src="/images/ok.svg" alt="Job concluido" />
+                </button>
                 <a 
                   href="/job/<%= job.id %> " 
                   class="button white edit" 
@@ -127,27 +138,54 @@
     </div>
     <!-- end container -->
 
-    <div class="modal-wrapper">
+     <div class="modal-wrapper">
       <div class="modal">
         <img src="/images/trash-48.svg" alt="Excluir Job" title="Excluir Job" />
         <h3>Excluir Job</h3>
         <p>Quer mesmo excluir esse job? <br/>
         Ele será apagado para sempre.  
         <p>
-        <footer>
+        <footer class="footer">
           <a 
             class="button gray" 
-            href="#">Cancelar</a>
+            href="#">Cancelar
+          </a>
           <button
             class="button red"
             type="submit"
-            form="delete-job">Excluir Job</button>
+            form="delete-job">Excluir Job
+          </button>
         </footer>
       </div>
       <form 
         method="post" 
         action="/job/delete" 
-        id="delete-job"></form>
+        id="delete-job">
+      </form>
+    </div>
+
+    <div class="modal-wrapper complete">
+      <div class="modal complete">
+        <img src="/images/trash-48.svg" alt="Excluir Job" title="Excluir Job" />
+        <h3>Job Concluído</h3>
+        <p>Deseja concluir esse Job? <br/>
+        Ele será movido para Jobs concluídos para sempre.  
+        <p>
+        <footer class="footer">
+          <a 
+            class="button gray" 
+            href="#">Cancelar</a>
+          <button
+            class="button green"
+            type="submit"
+            form="completed-job">Concluir Job</button>
+        </footer>
+      </div>
+      <form 
+        method="post" 
+        action="/completed" 
+        id="completed-job">
+      </form>
     </div>
     <!-- end modal-wrapper -->
   </body>
