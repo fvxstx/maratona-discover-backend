@@ -39,6 +39,8 @@ O JobsCalc é uma aplicação de estimativa de cálculo para projetos freelancer
 
 ## 👨🏽‍💻 Modificações Pessoais
 
+No JobsCalc criei a aba de jobs concluídos, onde você pode marcar quando um trabalho é concluido na tela principal e o trabalho e movido para a área de jobs concluídos para melhor visualização de todos os trabalhos já terminados
+
 ## 🔖 Layout
 
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/s4fytPFbDiSkv4GPSfKaLE/Jobs-Planning). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
