@@ -6,7 +6,8 @@
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
+  <a href="#memo-licença">Licença</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-comandos">Comandos</a>
 </p>
 
 <p align="center">
@@ -48,6 +49,20 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.md) para mais detalhes.
+
+## 🧮 Comandos
+
+Para iniciar o projeto em modo desenvolvedor você utiliza o comando
+
+### `npm run dev`
+
+Abre o projeto nesse link [http://localhost:3000](http://localhost:3000) para ver no seu browers.
+
+Está pagina reinicia a cada mudança feita
+
+### `npm run init-db`
+
+Inicia o servidor do banco de dados SQLite.
 
 ---
 
